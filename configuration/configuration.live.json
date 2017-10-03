@@ -1,0 +1,42 @@
+{
+  "host": "http://localhost:8080",
+  "port": 3000,
+  "root_folder": "/<YOUR_WORKSPACE_FOLDER>/gm-live/src",
+  "bind": [
+    {
+      "folder": "files"
+    },
+    {
+      "uri": "/index",
+      "path": "/index.html"
+    },
+    {
+      "uri": "/resources",
+      "path": "/resources"
+    },
+    {
+      "uri": "/dist",
+      "path": "/dist"
+    }
+  ],
+  "request": {
+    "timeout": 15000,
+    "headers": {
+      "Authorization": "Basic Z21yb290OlxoMzR2eW0zdDRsLw=="
+    }
+  },
+  "override_responses": {
+    "/SignIn": [
+      {
+        "field": "targetUrl",
+        "value": "http://localhost:3000/index"
+      }
+    ]
+  },
+  "log": {
+    "colors": true,
+    "show_response": false,
+    "show_request_info": true,
+    "show_request_error": true
+  }
+}
