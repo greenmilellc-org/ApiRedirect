@@ -20,18 +20,10 @@
     }
   ],
   "request": {
-    "timeout": 15000,
-    "headers": {
-      "Authorization": "Basic Z21yb290OlxoMzR2eW0zdDRsLw=="
-    }
+    "timeout": 15000
+
   },
   "override_responses": {
-    "/SignIn": [
-      {
-        "field": "targetUrl",
-        "value": "http://localhost:3000/index"
-      }
-    ]
   },
   "log": {
     "colors": true,
