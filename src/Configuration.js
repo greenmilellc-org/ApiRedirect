@@ -27,7 +27,7 @@ function Configuration() {
  * @returns {string}
  */
 Configuration.prototype.host = function () {
-    return `https://${cli.host}.greenmile.com` || this.configuration.host;
+    return cli.host == null ? this.configuration.host : `https://${cli.host}.greenmile.com`;
 };
 
 /**
